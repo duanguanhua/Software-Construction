@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
     <test name="Test">
-       <!--<groups>-->
-           <!--<run>-->
-               <!--<include name="run"/>-->
-           <!--</run>-->
-       <!--</groups>-->
+        <!--<groups>-->
+        <!--<run>-->
+        <!--<include name="run"/>-->
+        <!--</run>-->
+        <!--</groups>-->
         <classes>
             <class name="homework01.ToolsNGTest">
                 <methods>

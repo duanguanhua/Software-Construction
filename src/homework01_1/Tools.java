@@ -14,7 +14,7 @@ public class Tools {
     public static String toBinary(int num) {
         String binaryString = "";
         LinkedStack stack = new LinkedStack();
-        if (num ==0) { //0 should be careful
+        if (num == 0) { //0 should be careful
             return "0";
         }
         while (num != 0) {
@@ -23,7 +23,7 @@ public class Tools {
             stack.push(remainder);
         }
         while (!stack.isEmpty()) {
-            binaryString +=  stack.pop() + "";
+            binaryString += stack.pop() + "";
         }
         return binaryString;
     }
@@ -38,7 +38,7 @@ public class Tools {
         //add your code here
         String octalString = "";
         LinkedStack stack = new LinkedStack();
-        if (num ==0) {
+        if (num == 0) {
             return "0";
         }
         while (num != 0) {
@@ -63,7 +63,7 @@ public class Tools {
         char[] c = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
         String hexadecimalString = "";
         LinkedStack stack = new LinkedStack();
-        if (num ==0) {
+        if (num == 0) {
             return "0";
         }
         while (num != 0) {
@@ -89,7 +89,7 @@ public class Tools {
         String otherString = "";
         LinkedStack stack = new LinkedStack();
         char[] c = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
-        if (num ==0) {
+        if (num == 0) {
             return "0";
         }
         while (num != 0) {

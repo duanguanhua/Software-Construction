@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package homework01;
+package homework_generics;
 
 /**
- * @author
+ * Created by Duan Guanhua on 2017/10/13.
  */
 public class Tools {
     /**
@@ -15,10 +10,11 @@ public class Tools {
      * @param num
      * @return
      */
+
     public static String toBinary(int num) {
         String binaryString = "";
-        ArrayStack stack = new ArrayStack();
-        if (num == 0) {
+        LinkedStack stack = new LinkedStack();
+        if (num == 0) { //0 should be careful
             return "0";
         }
         while (num != 0) {
@@ -41,7 +37,7 @@ public class Tools {
     public static String toOctal(int num) {
         //add your code here
         String octalString = "";
-        ArrayStack stack = new ArrayStack();
+        LinkedStack stack = new LinkedStack();
         if (num == 0) {
             return "0";
         }
@@ -63,9 +59,10 @@ public class Tools {
      * @return
      */
     public static String toHexadecimal(int num) {
+        //add your code here
         char[] c = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
         String hexadecimalString = "";
-        ArrayStack stack = new ArrayStack();
+        LinkedStack stack = new LinkedStack();
         if (num == 0) {
             return "0";
         }
@@ -88,8 +85,9 @@ public class Tools {
      * @return
      */
     public static String toOther(int num, int d) {
+        //add your code here
         String otherString = "";
-        ArrayStack stack = new ArrayStack();
+        LinkedStack stack = new LinkedStack();
         char[] c = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
         if (num == 0) {
             return "0";
@@ -128,7 +126,7 @@ public class Tools {
      * @return
      */
     public static boolean isMatch(String exp) {
-        Stack s = new ArrayStack();
+        LinkedStack s = new LinkedStack();
         for (char c : exp.toCharArray()) {
             if (c == '[' || c == '(') {
                 s.push(c);
@@ -146,5 +144,4 @@ public class Tools {
         }
         return s.isEmpty();
     }
-
 }

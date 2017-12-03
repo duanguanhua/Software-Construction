@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package homework01_1;
+package homework_generics;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -31,7 +31,7 @@ public class ToolsNGTest {
                 {11, "1011"}
         };
         for (Object[] data : datas) {
-            String result = homework01_1.Tools.toBinary((int) data[0]); //Actual
+            String result = Tools.toBinary((int) data[0]); //Actual
             String expResult = (String) data[1];           //Expected
             assertEquals(result, expResult);
             System.out.println("testToBinary()");
@@ -50,7 +50,7 @@ public class ToolsNGTest {
                 {11, "13"}
         };
         for (Object[] data : datas) {
-            String result = homework01_1.Tools.toOctal((int) data[0]);   //Actual
+            String result = Tools.toOctal((int) data[0]);   //Actual
             String expResult = (String) data[1];           //Expected
             assertEquals(result, expResult);
             System.out.println("testToOctal()");
@@ -72,7 +72,7 @@ public class ToolsNGTest {
      */
     @Test(dataProvider = "dataForHexadecimal")
     public void testToHexadecimal(int num, String hexadecimal) {
-        String result = homework01_1.Tools.toHexadecimal(num);
+        String result = Tools.toHexadecimal(num);
         assertEquals(result, hexadecimal);
         System.out.println("testToHexadecimal()");
     }
@@ -95,7 +95,7 @@ public class ToolsNGTest {
      */
     @Test(dataProvider = "dataForOther")
     public void testToOther(int num, int d, String string) {
-        String result = homework01_1.Tools.toOther(num, d);
+        String result = Tools.toOther(num, d);
         assertEquals(result, string);
         System.out.println("testToOther()");
 
@@ -117,7 +117,7 @@ public class ToolsNGTest {
                 {15, 'F'}
         };
         for (Object[] data : datas) {
-            char result = homework01_1.Tools.toChar((Integer) data[0]);
+            char result = Tools.toChar((Integer) data[0]);
             char expResult = (Character) data[1];
             assertEquals(result, expResult);
             System.out.println("testToChar()");

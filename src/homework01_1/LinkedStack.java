@@ -5,36 +5,33 @@ import java.util.LinkedList;
 /**
  * Created by Duan Guanhua on 2017/10/13.
  */
-public class LinkedStack<T> {
-    private LinkedList<T> linkedList = null;
+public class LinkedStack {
+    private LinkedList list = new LinkedList<>();
 
-    public LinkedStack() {
-        linkedList = new LinkedList<T>();
+    public void push(Object object) {
+        list.addFirst(object);
     }
 
-    public void push(T t) {
-        linkedList.addFirst(t);
+    public Object pop() {
+        return list.removeFirst();
     }
 
-    public T pop() {
-        return linkedList.removeFirst();
+    public Object peek() {
+        return list.getFirst();
     }
 
-    public T peek(){
-        return linkedList.peekFirst();
-
-    }
     public int size() {
-        return linkedList.size();
+        return list.size();
+
     }
 
     void clear() {
-        linkedList.clear();
+        list = null;
     }
 
 
     public boolean isEmpty() {
-        return linkedList.size() == 0;
+        return list.isEmpty();
     }
 }
 

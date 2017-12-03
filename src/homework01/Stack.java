@@ -6,14 +6,18 @@
 package homework01;
 
 /**
- *
- * @author  
+ * @author
  */
 public interface Stack {
     Object pop();  //out
+
     Object peek(); //top one
+
     void push(Object e);    //in
+
     void clear();
+
     int size();
+
     boolean isEmpty();
 }
